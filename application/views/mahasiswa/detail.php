@@ -33,6 +33,29 @@
             </tr>
         </tbody>
     </table>
+    <div class="col-md-5 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex flex-column align-items-center text-center">
+                <img src="<?=base_url()?>upload/photos/<?=$siswa->id?>.jpg" width="300"/>
+                    <div class="mt-4">
+                        <h4><?php $siswa->nama?></h4>
+                        <p>Foto Mahasiswa</p>
+                        <br>
+                        <a href="https://www.instagram.com/jundi.fatih" target="_blank"><button class="btn btn-success">Instagram</button></a>
+                        <?php 
+                        echo form_open_multipart('mahasiswa/upload');
+                        ?>
+                        <input type="file" name="foto" size="300"/>
+                        <input type="hidden" name="idmahasiswa" value="<?php echo $siswa->id ?>">
+                        <br><br>
+                        <input type="submit" value="Upload Foto" class="btn btn-primary"/>
+                        </form>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>  
     </div> 
 </body>
 </html>
