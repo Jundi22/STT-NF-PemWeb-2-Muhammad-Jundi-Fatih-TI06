@@ -22,10 +22,10 @@
         <tbody>
             <tr>
                 <td><?php echo $matakuliah -> id ?></td>
-                <td><?php echo $matakuliah -> nama ?></td> 
+                <td><?php echo $matakuliah -> nama_matkul ?></td> 
                 <td><?php echo $matakuliah -> sks ?></td>              
                 <td><?php echo $matakuliah -> kode ?></td>
-                <td><?php echo $matakuliah -> dosen ?></td>
+                <td><?php echo $matakuliah -> dosen_id ?></td>
             </tr>
         </tbody>
     </table>

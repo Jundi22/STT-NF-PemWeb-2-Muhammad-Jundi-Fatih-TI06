@@ -40,6 +40,8 @@ class Mahasiswa extends CI_Controller{
         $_tmp_lahir = $this->input->post('tmp_lahir');
         $_tgl_lahir = $this->input->post('tgl_lahir');
         $_ipk = $this->input->post('ipk');
+        $_matakuliah_id= $this->input->post('matakuliah_id');
+        $_kelas_id= $this->input->post('kelas_id');
 
        $data_mahasiswa['nim'] = $_nim; //2
        $data_mahasiswa['nama'] = $_nama;
@@ -47,6 +49,8 @@ class Mahasiswa extends CI_Controller{
        $data_mahasiswa['tmp_lahir'] = $_tmp_lahir;
        $data_mahasiswa['tgl_lahir'] = $_tgl_lahir;
        $data_mahasiswa['ipk'] = $_ipk;
+       $data_mahasiswa['matakuliah_id']=$_matakuliah_id;
+       $data_mahasiswa['kelas_id']=$_kelas_id;
 
        if((!empty($_idedit))){  //update
            $data_mahasiswa['id'] = $_idedit;

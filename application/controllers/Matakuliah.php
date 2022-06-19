@@ -30,15 +30,15 @@ class Matakuliah extends CI_Controller{
     public function save_matakuliah(){
         // akses ke model matakuliah
         $this->load->model('matakuliah_model','matakuliah'); //1
-        $_nama = $this->input->post('nama');
+        $_nama = $this->input->post('nama_matkul');
         $_sks = $this->input->post('sks');
         $_kode = $this->input->post('kode');
-        $_dosen = $this->input->post('dosen');
+        $_dosen_id = $this->input->post('dosen_id');
 
-       $data_matakuliah['nama'] = $_nama; //2
+       $data_matakuliah['nama_matkul'] = $_nama; //2
        $data_matakuliah['sks'] = $_sks;
        $data_matakuliah['kode'] = $_kode;
-       $data_matakuliah['dosen'] = $_dosen;
+       $data_matakuliah['dosen_id'] = $_dosen_id;
 
        if((!empty($_idedit))){  //update
            $data_matakuliah['id'] = $_idedit;

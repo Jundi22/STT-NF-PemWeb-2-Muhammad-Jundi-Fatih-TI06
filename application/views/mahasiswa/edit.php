@@ -82,6 +82,42 @@
     </div>
   </div> 
   <div class="form-group row">
+    <label for="matakuliah_id" class="col-4 col-form-label">ID Prodi</label> 
+    <div class="col-8">
+      <div class="input-group">
+        <select class="form-control" value="<?=$obj_mahasiswa->matakuliah_id?>" id="matakuliah_id" name="matakuliah_id" >
+          <?php 
+          include "config.php";
+          $result = mysqli_query($connect, "SELECT * FROM matakuliah");
+          while ( $row= mysqli_fetch_array($result)) 
+          {?>
+          <option value="<?php echo $row[0]?>">
+          <?php echo $row[0]?>
+          </option>  
+          <?php }?>
+        </select>
+      </div>
+    </div>
+  </div> 
+  <div class="form-group row">
+    <label for="kelas_id" class="col-4 col-form-label">Id Kelas</label> 
+    <div class="col-8">
+      <div class="input-group">
+        <select class="form-control" value="<?=$obj_mahasiswa->matakuliah_id?>" id="kelas_id" name="kelas_id" >
+          <?php 
+          include "config.php";
+          $result = mysqli_query($connect, "SELECT * FROM kelas");
+          while ( $row= mysqli_fetch_array($result)) 
+          {?>
+          <option value="<?php echo $row[0]?>">
+          <?php echo $row[0]?>
+          </option>  
+          <?php }?>
+        </select>
+      </div>
+    </div>
+  </div> 
+  <div class="form-group row">
     <div class="offset-4 col-8">
       <button name="submit" type="submit" class="btn btn-primary">Submit</button>
     </div>

@@ -21,14 +21,14 @@ class Mahasiswa_model extends CI_Model{
     }
     // Baru
     public function simpan($data){
-        $sql = "INSERT INTO mahasiswa (nim,nama,gender,tmp_lahir,tgl_lahir,ipk) VALUE (?,?,?,?,?,?)";
+        $sql = "INSERT INTO mahasiswa (nim,nama,gender,tmp_lahir,tgl_lahir,ipk,matakuliah_id,kelas_id) VALUE (?,?,?,?,?,?,?,?)";
 
         $this->db->query($sql, $data);
         $insert_id = $this->db->insert_id();
         return $this->getById($insert_id);
     }
     public function update($data){
-        $sql = "UPDATE mahasiswa SET nim=?, nama=?, gender=?, tmp_lahir=?, tgl_lahir=?, ipk=? WHERE id=?";
+        $sql = "UPDATE mahasiswa SET nim=?, nama=?, gender=?, tmp_lahir=?, tgl_lahir=?, ipk=?, matakuliah_id=?,kelas_id=? WHERE id=?";
         $this->db->query($sql,$data);
     }
     public function delete($data){

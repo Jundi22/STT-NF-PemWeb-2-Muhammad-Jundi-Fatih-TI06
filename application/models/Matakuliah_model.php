@@ -15,14 +15,14 @@ class Matakuliah_model extends CI_Model{
         return $query->row();
     }
     public function simpan($data){
-        $sql = "INSERT INTO matakuliah (nama,sks,kode,dosen) VALUE (?,?,?,?)";
+        $sql = "INSERT INTO matakuliah (nama_matkul,sks,kode,dosen_id) VALUE (?,?,?,?)";
 
         $this->db->query($sql, $data);
         $insert_id = $this->db->insert_id();
         return $this->getById($insert_id);
     }
     public function update($data){
-        $sql = "UPDATE matakuliah SET nama=?, sks=?, kode=?, dosen=? WHERE id=?";
+        $sql = "UPDATE matakuliah SET nama_matkul=?, sks=?, kode=?, dosen_id=? WHERE id=?";
         $this->db->query($sql,$data);
     }
     public function delete($data){

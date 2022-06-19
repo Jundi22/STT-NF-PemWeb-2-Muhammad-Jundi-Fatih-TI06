@@ -42,10 +42,10 @@ if ($username){
             ?>
             <tr>
                 <td><?php echo $nomor ?></td>
-                <td><?php echo $matkul -> nama ?></td>
+                <td><?php echo $matkul -> nama_matkul ?></td>
                 <td><?php echo $matkul -> sks ?></td>
                 <td><?php echo $matkul -> kode ?></td>
-                <td><?php echo $matkul -> dosen ?></td>
+                <td><?php echo $matkul -> dosen_id ?></td>
                 <td>
                     <a href="<?php echo base_url("index.php/matakuliah/detail_matakuliah/$matkul->id")?>" 
                         class="btn btn-primary">Detail <br>
@@ -57,7 +57,7 @@ if ($username){
                     &nbsp;
                     <a href= <?php echo base_url("index.php/matakuliah/delete_matakuliah/$matkul->id") ?>
                         class="btn btn-danger"
-                        onclick="return hapusMatakuliah('Anda yakin ingin menghapus Nama Mata Kuliah <?php echo $matkul->nama ?>?')">Hapus <br>
+                        onclick="return hapusMatakuliah('Anda yakin ingin menghapus Nama Mata Kuliah <?php echo $matkul->nama_matkul ?>?')">Hapus <br>
                     </a>
                 </td>
             </tr>

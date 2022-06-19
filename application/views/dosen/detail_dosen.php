@@ -59,3 +59,7 @@
     </div> 
 </body>
 </html>
+
+<!-- Link Tugas Praktikum 11 Upload Foto Dosen di Git Bash
+    https://github.com/Jundi22/STT-NF-PemWeb-2-Muhammad-Jundi-Fatih-TI06/tree/UploadFoto-Dosen/Mahasiswa-Praktikum11
+-->

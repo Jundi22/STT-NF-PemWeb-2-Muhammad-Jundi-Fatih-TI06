@@ -19,6 +19,8 @@
                 <th>Tempat Lahir</th>
                 <th>Tanggal Lahir</th>
                 <th>IPK</th>
+                <th>Mata Kuliah Id</th>
+                <th>Kelas Id</th>
             </tr>
         </thead>
         <tbody>
@@ -30,6 +32,8 @@
                 <td><?php echo $siswa -> tgl_lahir ?></td>
                 <td><?php echo $siswa -> gender ?></td>
                 <td><?php echo $siswa -> ipk ?></td>
+                <td><?php echo $siswa -> matakuliah_id ?></td>
+                <td><?php echo $siswa -> kelas_id ?></td>
             </tr>
         </tbody>
     </table>
